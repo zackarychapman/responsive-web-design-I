@@ -30,12 +30,13 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
-ch
+
+
 .container{
 	background:white;
 	margin: 100px 100px;
 	padding: 15px 70px 100px 70px;
-	border:blue 5px solid;
+	/* border:blue 5px solid; */
 }
 /* this is really just to control the margins
 on both sides of all the content and set
@@ -222,7 +223,7 @@ size I wanted and space them evenly.  */
 .main-content-box p{
     display:flex;
     justify-content: space-evenly;
-    width: 500px;
+    width: 100%;
     padding-bottom:30px;
     /* display: flex; */
     /* justify-content:center; */
@@ -320,83 +321,113 @@ footer{
 	color:teal;
 }
 
-
-
-@media (max-width:500px){
+@media (max-width:800px){
     *{
-        max-width:550px;
+        max-width:800px;
     }
-    body{
-        margin-left:0px;
-        background: tan;
+   
+    .middle-img{
+        max-width:690px;
+    }
+    .code-image{
+        display:none;
+    }
+    .main-content-box p{
+        width:250px;
+        /* border:red solid 2px; */
+    }
+    header {
+        margin-left: 80px;
+        /* border: solid red 1px; */
+    }
+
+    nav{
+        /* border:blue solid 1px; */
+        margin-right:50px;
+        
+    }
+
+    .nav-bar a{
+        margin-left:10px;
+        margin-right:10px;
+        
+    }
+
+    .nav-bar a:nth-child(7){
+        display:none;
+    }
+    .contact-section{
+        margin-left:125px;
+    }
+    h2{
+        justify-content: center;
     }
     .container{
-        margin-right:-1000px;
-        padding-left:90px;
+        /* border: 1px solid red; */
+        object-fit: contain;
+        margin-left:0px;
+        margin-right:0px;
+        width:70%;
+    }
+    body{
+        margin-left: 0px;
+        margin-right:0px;
+        width:100%;
+    }
+
+
+
+@media (max-width:650px){
+    *{
+        max-width:650px;
     }
     
     nav{
         display:flex;
-        justify-content: space-evenly;
-        display: column;
+        flex-direction:column;
+        justify-content:center;
+    }
+
+    nav a{
         margin-left:50px;
-        margin-top:50px;
+        padding-top:50px;
+        font-size:80px;
+        /* border: 1px solid green; */
+        text-align:center;
+        
+    }
+
+    .container{
+        margin-left:50px;
     }
     
-    .nav-bar a{
-        width: 400px;
-        background-color: white;
-        text-align:center;
-        text-decoration:none;
-        font-size:25px;
-        color:white;
-        padding:10px;
-        border:solid grey 1px;
-        display: flexbox;
-        grid-template-columns: repeat(7, 1fr);
+    .main-content-box{
+        margin-left:100px;
     }
 
-    .nav-bar a{
-        grid-row:1;
+    header{
+        justify-content:left;
     }
-    .nav-bar a:(1){
-        order: 3;
-        
-    }
-    .nav-bar div:nth-child(3){
-        order: 1;
-    }
-    .nav-bar a:nth-child(3){
-        grid-column:2;
-    }
-    .nav-bar a:nth-child(4){
-        grid-column: 3;
-    }
-    .nav-bar a:nth-child(5){
-        grid-column: 4;
-    }
-    .nav-bar a:nth-child(6){
-        grid-column: 5;
-    }
-    .nav-bar a:nth-child(7){
-        grid-column: 6;
-        padding-right: 90px;
-    }
+  
 
-
-
-    /* .logo{
-        
-    } */
 
     h1{
         display:flex;
-        margin-left:100px;
-        padding-top:50px;
+        padding:20px;
+        font-size: xx-large;
+        /* justify-content:center; */
+        justify-content:left;
+
     }
     button{
-        margin-left:140px;
         margin-bottom:40px;
+        padding:0;
+        margin-left:15px;
+        font-size:large;
+        width:140px;
+        height: 50px;
+        justify-content:left;
+
     }
     .middle-img{
         
@@ -409,30 +440,24 @@ footer{
         padding-top:50px;
         padding-bottom:50px;
         display:block;
+        margin-left:40px;
         
     }
-    p{
-        max-width: 600px;
-        text-align:flex;
-        display:flex;
-    }
+    /*  */
     .code-image{
         display:none;
     }
 
-    
-}
+    .contact2{
+        font-size:medium;
+    }
 
-@media (max-width:800px){
-*{
-    max-width:800px;
+
+
 }
-.middle-img{
-    max-width:690px;
-}
-.code-image{
-    display:none;
-}
+    
+
+
 
 
 
